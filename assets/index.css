@@ -8,7 +8,7 @@ font-family: 'Lora', serif;
 }
 :root
 {
-    --backgroundcolor : #536DFE;
+    --backgroundcolor : #871cce80;
 
 
 }
@@ -21,13 +21,14 @@ header
 {
     background-color: var(--backgroundcolor);
     display: flex;
-    align-items: center;
     width: 100%;
+    
 
 }
 .logo img
 {
     height: 5vh;
+    
     width: 30vw;
 }
 
@@ -43,12 +44,14 @@ nav ul
 {
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: flex-start;
+
 
 }
-li a
+
+li 
 {
-    color: #ffffff;
+    color: #000000;
     font-weight: bold;
 }
 .line
@@ -73,11 +76,8 @@ li a
     transition: background-image 2s linear;    
 }
 
-.next
-{
-    right: 2%;
-}
-ul :hover 
+
+header nav ul :hover 
 {
     border-bottom: solid rgb(167, 247, 167);
 }
@@ -95,11 +95,10 @@ ul :hover
 .filters
 {
     background-color: var(--backgroundcolor);
-    color: #ffffff;
+    color: rgb(255, 255, 255);
     font-weight: bold;
     width: 30%;
-    border-right: solid ;
-}
+    }
 .foodlist
 {
     width: 80%;
@@ -170,7 +169,7 @@ h4
 }
 button{
     padding: 0.5em;
-    color: white;
+    color: black;
     background-color: transparent;
     border: solid white;
     font-size: 1.5em;
@@ -193,7 +192,8 @@ form
     flex-direction: column;
 }
 .modal {
-    display: flex;
+    display: none;
+
     justify-content: center;
     align-items: center;
     position: fixed; 
@@ -209,17 +209,25 @@ form
   {
       width: 60vw;
       height: 60vh;
-      text-align: center;
-
-      border-radius: 18px;
-      
-     
+      text-align: center;   
+      animation: toptocenter 1s linear ;  
 
   }
   .modal-container
   {
-    background-color: var(--backgroundcolor);
+    background-color: rgba(255, 255, 255, 0.733);
 
+  }
+  @keyframes toptocenter {
+      0%
+      {
+          transform: translateY(-100%);
+      }
+      100%
+      {
+          transform: translateY(0%);
+      }
+      
   }
   .register
   {
@@ -235,17 +243,17 @@ form
       font-size: 2rem;
       font-weight: bolder;
       margin-left: 95%;
+      cursor: pointer;
   }
  .modal input
   {
       margin-left: 8%;
       margin-right: 8%;
-      margin-top: 8%;
-      border: none;
-      border-bottom: solid black;
+      margin-top: 4%;
+
       font-size: 1.3rem;
       background-color: transparent;
-      padding-left: 1em;
+      padding: 0.5em;
 
       
       
@@ -254,10 +262,8 @@ form
   {
     background-color: green;
     padding:4%;
-    width: fit-content;
     color: white;
     border: solid white;
-    border-radius: 1rem;
     cursor: pointer;
   }
   input[type="reset"]
@@ -266,7 +272,7 @@ form
   }
   input::placeholder
   {
-      color: white;
+      color: black;
   }
   .regandlogin,.register,.login
   {
@@ -288,3 +294,38 @@ form
     text-align: right;
     font-weight: bold;
 }
+.foodieposter picture img
+{
+    width: 100%;
+    height: 80%;
+    
+}
+.createaccount
+{
+    font-weight: bold;
+    color: brown;
+}
+.createaccount :focus
+{
+    color: green;
+}
+
+footer
+{
+    background-color: black;
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+    padding: 1rem;
+    font-size: 1.5em;
+}
+footer p
+{
+    color: rgb(102, 88, 88);
+}
+footer ul li 
+{
+    color: white;
+    margin-top: 15%;
+}
+
